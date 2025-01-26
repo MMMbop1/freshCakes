@@ -11,4 +11,20 @@ public abstract class WhippedCreamCake extends Cake {
     public void addVanillaCream(String vanillaCream) {
         super.vanillaCreams.add(vanillaCream);
     }
+
+    @Override
+    public void addHardWhippedCream(String hardWhippedCream) {
+        super.hardWhippedCream = hardWhippedCream;
+    }
+
+    @Override
+    public void addMarzipanRose(String marzipanRose) {
+        super.marzipanRose = marzipanRose;
+    }
+
+    @Override
+    public void addIcingSugar(String icingSugar) {
+        super.icingSugar = icingSugar;
+    }
+
 }

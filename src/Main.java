@@ -3,10 +3,8 @@ import builder.ChocolateCakeBuilder;
 import builder.OperaCakeBuilder;
 import builder.PrincessCakeBuilder;
 import cakes.Cake;
-import cakes.OperaCake;
-import cakes.PrincessCake;
+import command.*;
 
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,8 +13,6 @@ public class Main {
                 .addCakeBottom("TårtBotten")
                 .addVanillaCream("Vaniljkräm")
                 .build();
-
-        princessCake.getCakeBottoms().forEach(System.out::println);
 
         Builder operaCakeBuilder = new OperaCakeBuilder();
         Cake operaCake = operaCakeBuilder
@@ -31,6 +27,28 @@ public class Main {
                 .addChocolateCakeBottom("chokladBotten")
                 .addRaspberryMousse("hallonMousse")
                 .build();
+
+
+        CakePipeline pipeline = new CakePipeline();
+        pipeline.addCommand(new AddHardWhippedCreamOnCake());
+        pipeline.addCommand(new AddGreenMarzipanLod());
+        pipeline.addCommand(new AddMarzipanRose());
+        pipeline.addCommand(new AddIcingSugar());
+
+        pipeline.execute(princessCake);
+
+        CakePipeline pipeline1 = new CakePipeline();
+        pipeline1.addCommand(new AddHardWhippedCreamOnCake());
+        pipeline1.addCommand(new AddPinkMarzipanLod());
+        pipeline1.addCommand(new AddMarzipanRose());
+        pipeline1.addCommand(new AddIcingSugar());
+        pipeline1.execute(operaCake);
+
+        CakePipeline pipeline2 = new CakePipeline();
+        pipeline2.addCommand(new AddChocolateButterCream());
+        pipeline2.addCommand(new AddChocolateGanache());
+        pipeline2.addCommand(new AddRaspberry());
+        pipeline2.execute(chocolateCake);
 
     }
 }

@@ -10,11 +10,16 @@ public abstract class Cake {
     protected ArrayList<String> chocolateCakeBottoms = new ArrayList<>();
     protected ArrayList<String> raspberryMousse = new ArrayList<>();
     protected String raspBerryJam;
-    private String greenMarzipanLod;
-    private String pinkMarzipanLod;
-    private String marzipanRose;
-    private String icingSugar;
-    private String chocolateGanache;
+    protected String hardWhippedCream;
+    protected String greenMarzipanLod;
+    protected String pinkMarzipanLod;
+    protected String marzipanRose;
+    protected String icingSugar;
+    protected String chocolateGanache;
+    protected String chocolateButtercream;
+
+    protected String raspberry;
+
 
     public void addCakeBottom(String cakeBottom) {
         throw new UnsupportedOperationException("Not implemented");
@@ -32,19 +37,35 @@ public abstract class Cake {
         throw new UnsupportedOperationException("Not implemented");
     }
 
-    public ArrayList<String> getCakeBottoms() {
-        return cakeBottoms;
+    public void addHardWhippedCream(String hardWhippedCream) {
+        throw new UnsupportedOperationException("Not implemented");
     }
 
-    public void setCakeBottoms(ArrayList<String> cakeBottoms) {
-        this.cakeBottoms = cakeBottoms;
+    public void addGreenMarzipanLod(String greenMarzipanLod) {
+        throw new UnsupportedOperationException("Not implemented");
     }
 
-    public ArrayList<String> getVanillaCreams() {
-        return vanillaCreams;
+    public void addMarzipanRose(String marzipanRose) {
+        throw new UnsupportedOperationException("Not implemented");
     }
 
-    public void setVanillaCreams(ArrayList<String> vanillaCreams) {
-        this.vanillaCreams = vanillaCreams;
+    public void addIcingSugar(String icingSugar) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public void addPinkMarzipanLod(String pinkMarzipanLod) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public void addChocolateButtercream(String chocolateButtercream) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public void addChocolateGanache(String chocolateGanache) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public void addRaspberry(String raspberry) {
+        throw new UnsupportedOperationException("Not implemented");
     }
 }
