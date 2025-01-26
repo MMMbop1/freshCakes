@@ -5,38 +5,46 @@ import java.util.ArrayList;
 public abstract class Cake {
     private String name;
     private String id;
+    protected ArrayList<String> cakeBottoms = new ArrayList<>();
+    protected ArrayList<String> vanillaCreams = new ArrayList<>();
     protected ArrayList<String> chocolateCakeBottoms = new ArrayList<>();
-    private ArrayList<String> raspberryMousse = new ArrayList<>();
-    private String whippedCream;
+    protected ArrayList<String> raspberryMousse = new ArrayList<>();
+    protected String raspBerryJam;
     private String greenMarzipanLod;
     private String pinkMarzipanLod;
     private String marzipanRose;
     private String icingSugar;
-    private String raspBerryJam;
     private String chocolateGanache;
 
+    public void addCakeBottom(String cakeBottom) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public void addVanillaCream(String vanillaCream) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
 
     public void addChocolateCakeBottom(String chocolateCakeBottom) {
-        chocolateCakeBottoms.add(chocolateCakeBottom);
+        throw new UnsupportedOperationException("Not implemented");
     }
 
-    public void addRaspBerryMousse(String raspBerryMousse) {
-        raspberryMousse.add(raspBerryMousse);
+    public void addRaspberryMousse(String raspberryMousse) {
+        throw new UnsupportedOperationException("Not implemented");
     }
 
-    public String getName() {
-        return name;
+    public ArrayList<String> getCakeBottoms() {
+        return cakeBottoms;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCakeBottoms(ArrayList<String> cakeBottoms) {
+        this.cakeBottoms = cakeBottoms;
     }
 
-    public String getId() {
-        return id;
+    public ArrayList<String> getVanillaCreams() {
+        return vanillaCreams;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setVanillaCreams(ArrayList<String> vanillaCreams) {
+        this.vanillaCreams = vanillaCreams;
     }
 }

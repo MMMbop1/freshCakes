@@ -2,28 +2,34 @@ package builder;
 
 import cakes.Cake;
 import cakes.OperaCake;
+import cakes.PrincessCake;
 
 public class OperaCakeBuilder implements Builder {
 
-    private OperaCake operaCake = new OperaCake();
+    private Cake operaCake = new OperaCake();
 
-    public OperaCakeBuilder addCakeBottom(String cakeBottom) {
+    @Override
+    public Builder addCakeBottom(String cakeBottom) {
         operaCake.addCakeBottom(cakeBottom);
         return this;
     }
 
-    public OperaCakeBuilder addVanillaCream(String vanillaCream) {
+    @Override
+    public Builder addVanillaCream(String vanillaCream) {
         operaCake.addVanillaCream(vanillaCream);
         return this;
     }
 
-    public OperaCakeBuilder addRaspberryJam(String raspberryJam) {
-        operaCake.setRaspBerryJam(raspberryJam);
+    @Override
+    public Builder addRaspberryJam(String raspberryJam) {
+        operaCake.addRaspberryMousse(raspberryJam);
         return this;
     }
 
     @Override
-    public OperaCake build() {
-        return null;
+    public Cake build() {
+        Cake producedOperaCake = operaCake;
+        operaCake = new OperaCake();
+        return producedOperaCake;
     }
 }
