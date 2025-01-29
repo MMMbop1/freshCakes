@@ -1,4 +1,4 @@
-package cakes;
+package cake;
 
 public abstract class WhippedCreamCake extends Cake {
 
@@ -24,7 +24,7 @@ public abstract class WhippedCreamCake extends Cake {
 
     @Override
     public void addIcingSugar(String icingSugar) {
-        super.icingSugar = icingSugar;
+        super.setIcingSugar(icingSugar);
     }
 
 }

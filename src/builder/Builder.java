@@ -1,6 +1,6 @@
 package builder;
 
-import cakes.Cake;
+import cake.Cake;
 
 public interface Builder {
     public Cake build();

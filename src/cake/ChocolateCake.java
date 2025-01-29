@@ -1,4 +1,4 @@
-package cakes;
+package cake;
 
 public class ChocolateCake extends Cake {
 
@@ -6,7 +6,6 @@ public class ChocolateCake extends Cake {
     public void addChocolateCakeBottom(String chocolateCakeBottom) {
         super.chocolateCakeBottoms.add(chocolateCakeBottom);
     }
-
     @Override
     public void addRaspberryMousse(String raspberryMousse) {
         super.raspberryMousse.add(raspberryMousse);
@@ -24,6 +23,17 @@ public class ChocolateCake extends Cake {
 
     @Override
     public void addRaspberry(String raspberry) {
-        super.raspberry = raspberry;
+        super.setRaspberry(raspberry);
+    }
+
+    @Override
+    public String toString() {
+        return "ChocolateCake{" +
+                "chocolateCakeBottoms=" + chocolateCakeBottoms +
+                ", raspberryMousse=" + raspberryMousse +
+                ", chocolateGanache='" + chocolateGanache + '\'' +
+                ", chocolateButtercream='" + chocolateButtercream + '\'' +
+                ", raspberry='" + raspberry + '\'' +
+                '}';
     }
 }

@@ -1,6 +1,6 @@
 package command;
 
-import cakes.Cake;
+import cake.Cake;
 
 public interface Command {
 

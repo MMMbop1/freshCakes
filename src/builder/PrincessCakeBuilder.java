@@ -1,28 +1,30 @@
 package builder;
 
-import cakes.Cake;
-import cakes.PrincessCake;
+import cake.Cake;
+import cake.ChocolateCake;
+import cake.PrincessCake;
 
 public class PrincessCakeBuilder implements Builder {
-
     private Cake princessCake = new PrincessCake();
 
     @Override
     public Builder addCakeBottom(String cakeBottom) {
         princessCake.addCakeBottom(cakeBottom);
+        System.out.println("added:" + princessCake.getCakeBottoms().getLast());
         return this;
     }
 
     @Override
     public Builder addVanillaCream(String vanillaCream) {
         princessCake.addVanillaCream(vanillaCream);
+        System.out.println("added:" + princessCake.getVanillaCreams().getLast());
         return this;
     }
 
     @Override
     public Cake build() {
         Cake producedPrincessCake = princessCake;
-        princessCake = new PrincessCake();
+        princessCake = new ChocolateCake();
         return producedPrincessCake;
     }
 }
