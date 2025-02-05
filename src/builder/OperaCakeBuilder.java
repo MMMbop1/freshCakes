@@ -5,7 +5,7 @@ import cake.OperaCake;
 
 public class OperaCakeBuilder implements Builder {
 
-    private Cake operaCake = new OperaCake();
+    private OperaCake operaCake = new OperaCake();
 
     @Override
     public Builder addCakeBottom(String cakeBottom) {

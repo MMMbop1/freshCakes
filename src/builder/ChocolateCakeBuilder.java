@@ -4,7 +4,7 @@ import cake.Cake;
 import cake.ChocolateCake;
 
 public class ChocolateCakeBuilder implements Builder {
-    private Cake chocolateCake = new ChocolateCake();
+    private ChocolateCake chocolateCake = new ChocolateCake();
 
     public ChocolateCakeBuilder() {}
 

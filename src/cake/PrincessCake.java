@@ -2,22 +2,31 @@ package cake;
 
 public class PrincessCake extends WhippedCreamCake {
 
+    private String greenMarzipanLod;
+
     public PrincessCake() {}
 
-    @Override
     public void addGreenMarzipanLod(String greenMarzipanLod) {
-        super.greenMarzipanLod = greenMarzipanLod;
+        this.greenMarzipanLod = greenMarzipanLod;
+    }
+
+    public String getGreenMarzipanLod() {
+        return greenMarzipanLod;
+    }
+
+    public void setGreenMarzipanLod(String greenMarzipanLod) {
+        this.greenMarzipanLod = greenMarzipanLod;
     }
 
     @Override
     public String toString() {
         return "PrincessCake{" +
-                "cakeBottoms=" + cakeBottoms +
-                ", vanillaCreams=" + vanillaCreams +
-                ", hardWhippedCream='" + hardWhippedCream + '\'' +
+                "cakeBottoms=" + getCakeBottoms() +
+                ", vanillaCreams=" + getVanillaCreams() +
+                ", hardWhippedCream='" + getHardWhippedCream() + '\'' +
                 ", greenMarzipanLod='" + greenMarzipanLod + '\'' +
-                ", marzipanRose='" + marzipanRose + '\'' +
-                ", icingSugar='" + icingSugar + '\'' +
+                ", marzipanRose='" + getMarzipanRose() + '\'' +
+                ", icingSugar='" + getIcingSugar() + '\'' +
                 '}';
     }
 }

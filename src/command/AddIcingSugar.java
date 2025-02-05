@@ -1,12 +1,18 @@
 package command;
 
-import cake.Cake;
+import cake.WhippedCreamCake;
 
 public class AddIcingSugar implements Command {
 
+    private WhippedCreamCake whippedCreamCake;
+
+    public AddIcingSugar(WhippedCreamCake whippedCreamCake) {
+        this.whippedCreamCake = whippedCreamCake;
+    }
+
     @Override
-    public void process(Cake cake) {
-        cake.addIcingSugar("Icing Sugar");
-        System.out.println("added:" + cake.getIcingSugar());
+    public void process() {
+        whippedCreamCake.addIcingSugar("Icing Sugar");
+        System.out.println("added:" + whippedCreamCake.getIcingSugar());
     }
 }

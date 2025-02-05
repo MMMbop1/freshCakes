@@ -1,12 +1,18 @@
 package command;
 
-import cake.Cake;
+import cake.OperaCake;
 
 public class AddPinkMarzipanLod implements Command {
 
+    private OperaCake operaCake;
+
+    public AddPinkMarzipanLod(OperaCake operaCake) {
+        this.operaCake = operaCake;
+    }
+
     @Override
-    public void process(Cake cake) {
-        cake.addPinkMarzipanLod("pinkMarzipanLod");
-        System.out.println("added:" + cake.getPinkMarzipanLod());
+    public void process() {
+        operaCake.addPinkMarzipanLod("pinkMarzipanLod");
+        System.out.println("added:" + operaCake.getPinkMarzipanLod());
     }
 }

@@ -1,30 +1,74 @@
 package cake;
 
+import java.util.ArrayList;
+
 public abstract class WhippedCreamCake extends Cake {
+    private ArrayList<String> cakeBottoms = new ArrayList<>();
+    private ArrayList<String> vanillaCreams = new ArrayList<>();
+    private String hardWhippedCream;
+    private String icingSugar;
 
-    @Override
+    private String marzipanRose;
+
+
     public void addCakeBottom(String cakeBottom) {
-        super.cakeBottoms.add(cakeBottom);
+        cakeBottoms.add(cakeBottom);
     }
 
-    @Override
     public void addVanillaCream(String vanillaCream) {
-        super.vanillaCreams.add(vanillaCream);
+        vanillaCreams.add(vanillaCream);
     }
 
-    @Override
     public void addHardWhippedCream(String hardWhippedCream) {
-        super.hardWhippedCream = hardWhippedCream;
+        this.hardWhippedCream = hardWhippedCream;
     }
 
-    @Override
     public void addMarzipanRose(String marzipanRose) {
-        super.marzipanRose = marzipanRose;
+        this.marzipanRose = marzipanRose;
     }
 
-    @Override
     public void addIcingSugar(String icingSugar) {
-        super.setIcingSugar(icingSugar);
+        this.icingSugar = icingSugar;
+        this.propertyChangeSupport.firePropertyChange("icingSugar", "", icingSugar);
     }
 
+    public ArrayList<String> getVanillaCreams() {
+        return vanillaCreams;
+    }
+
+    public ArrayList<String> getCakeBottoms() {
+        return cakeBottoms;
+    }
+
+    public void setCakeBottoms(ArrayList<String> cakeBottoms) {
+        this.cakeBottoms = cakeBottoms;
+    }
+
+    public void setVanillaCreams(ArrayList<String> vanillaCreams) {
+        this.vanillaCreams = vanillaCreams;
+    }
+
+    public String getHardWhippedCream() {
+        return hardWhippedCream;
+    }
+
+    public void setHardWhippedCream(String hardWhippedCream) {
+        this.hardWhippedCream = hardWhippedCream;
+    }
+
+    public String getIcingSugar() {
+        return icingSugar;
+    }
+
+    public void setIcingSugar(String icingSugar) {
+        this.icingSugar = icingSugar;
+    }
+
+    public String getMarzipanRose() {
+        return marzipanRose;
+    }
+
+    public void setMarzipanRose(String marzipanRose) {
+        this.marzipanRose = marzipanRose;
+    }
 }

@@ -1,8 +1,6 @@
 package command;
 
-import cake.Cake;
-
 public interface Command {
 
-    public void process(Cake cake);
+    public void process();
 }

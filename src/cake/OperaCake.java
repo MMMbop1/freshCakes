@@ -1,26 +1,45 @@
 package cake;
 
 public class OperaCake extends WhippedCreamCake {
-    @Override
+
+    private String raspBerryJam;
+
+    private String pinkMarzipanLod;
+
     public void addRaspberryMousse(String raspberryMousse) {
-        super.raspBerryJam = raspberryMousse;
+        raspBerryJam = raspberryMousse;
     }
 
-    @Override
     public void addPinkMarzipanLod(String pinkMarzipanLod) {
-        super.pinkMarzipanLod = pinkMarzipanLod;
+        this.pinkMarzipanLod = pinkMarzipanLod;
+    }
+
+    public String getPinkMarzipanLod() {
+        return pinkMarzipanLod;
+    }
+
+    public void setPinkMarzipanLod(String pinkMarzipanLod) {
+        this.pinkMarzipanLod = pinkMarzipanLod;
     }
 
     @Override
     public String toString() {
         return "OperaCake{" +
-                "cakeBottoms=" + cakeBottoms +
-                ", vanillaCreams=" + vanillaCreams +
+                "cakeBottoms=" + getCakeBottoms() +
+                ", vanillaCreams=" + getVanillaCreams() +
                 ", raspBerryJam='" + raspBerryJam + '\'' +
-                ", hardWhippedCream='" + hardWhippedCream + '\'' +
+                ", hardWhippedCream='" + getHardWhippedCream() + '\'' +
                 ", pinkMarzipanLod='" + pinkMarzipanLod + '\'' +
-                ", marzipanRose='" + marzipanRose + '\'' +
-                ", icingSugar='" + icingSugar + '\'' +
+                ", marzipanRose='" + getMarzipanRose() + '\'' +
+                ", icingSugar='" + getIcingSugar() + '\'' +
                 '}';
+    }
+
+    public String getRaspBerryJam() {
+        return raspBerryJam;
+    }
+
+    public void setRaspBerryJam(String raspBerryJam) {
+        this.raspBerryJam = raspBerryJam;
     }
 }

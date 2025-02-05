@@ -1,6 +1,5 @@
 package command;
 
-import cake.Cake;
 
 import java.util.ArrayList;
 
@@ -11,9 +10,9 @@ public class CakePipeline {
         pipeLine.add(command);
     }
 
-    public void execute(Cake cake) {
+    public void execute() {
         for (Command command : pipeLine) {
-            command.process(cake);
+            command.process();
         }
     }
 }

@@ -5,7 +5,7 @@ import cake.ChocolateCake;
 import cake.PrincessCake;
 
 public class PrincessCakeBuilder implements Builder {
-    private Cake princessCake = new PrincessCake();
+    private PrincessCake princessCake = new PrincessCake();
 
     @Override
     public Builder addCakeBottom(String cakeBottom) {
@@ -24,7 +24,7 @@ public class PrincessCakeBuilder implements Builder {
     @Override
     public Cake build() {
         Cake producedPrincessCake = princessCake;
-        princessCake = new ChocolateCake();
+        princessCake = new PrincessCake();
         return producedPrincessCake;
     }
 }

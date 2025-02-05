@@ -3,6 +3,9 @@ import builder.ChocolateCakeBuilder;
 import builder.OperaCakeBuilder;
 import builder.PrincessCakeBuilder;
 import cake.Cake;
+import cake.ChocolateCake;
+import cake.OperaCake;
+import cake.PrincessCake;
 import command.*;
 
 import java.util.ArrayList;
@@ -54,7 +57,7 @@ public class OrderReceiver {
 
         Builder princessBuilder = new PrincessCakeBuilder();
 
-        Cake princessCake = princessBuilder
+        PrincessCake princessCake = (PrincessCake) princessBuilder
                 .addCakeBottom("Tårtbotten")
                 .addVanillaCream("VaniljKräm")
                 .addCakeBottom("TårtBotten")
@@ -67,11 +70,11 @@ public class OrderReceiver {
         princessCake.addPropertyChangeListener(ceo);
 
         CakePipeline pipeline = new CakePipeline();
-        pipeline.addCommand(new AddHardWhippedCreamOnCake());
-        pipeline.addCommand(new AddGreenMarzipanLod());
-        pipeline.addCommand(new AddMarzipanRose());
-        pipeline.addCommand(new AddIcingSugar());
-        pipeline.execute(princessCake);
+        pipeline.addCommand(new AddHardWhippedCreamOnCake(princessCake));
+        pipeline.addCommand(new AddGreenMarzipanLod(princessCake));
+        pipeline.addCommand(new AddMarzipanRose(princessCake));
+        pipeline.addCommand(new AddIcingSugar(princessCake));
+        pipeline.execute();
 
         customer.setCake(princessCake);
         orders.add(customer);
@@ -82,7 +85,7 @@ public class OrderReceiver {
 
         Builder operaCakeBuilder = new OperaCakeBuilder();
 
-        Cake operaCake = operaCakeBuilder
+        OperaCake operaCake = (OperaCake) operaCakeBuilder
                 .addCakeBottom("Tårtbotten")
                 .addVanillaCream("VaniljKräm")
                 .addCakeBottom("TårtBotten")
@@ -95,11 +98,11 @@ public class OrderReceiver {
         operaCake.addPropertyChangeListener(ceo);
 
         CakePipeline pipeline = new CakePipeline();
-        pipeline.addCommand(new AddHardWhippedCreamOnCake());
-        pipeline.addCommand(new AddPinkMarzipanLod());
-        pipeline.addCommand(new AddMarzipanRose());
-        pipeline.addCommand(new AddIcingSugar());
-        pipeline.execute(operaCake);
+        pipeline.addCommand(new AddHardWhippedCreamOnCake(operaCake));
+        pipeline.addCommand(new AddPinkMarzipanLod(operaCake));
+        pipeline.addCommand(new AddMarzipanRose(operaCake));
+        pipeline.addCommand(new AddIcingSugar(operaCake));
+        pipeline.execute();
 
         customer.setCake(operaCake);
         orders.add(customer);
@@ -109,7 +112,7 @@ public class OrderReceiver {
         Customer customer = newCustomer();
         Builder chocolateCakeBuilder = new ChocolateCakeBuilder();
 
-        Cake chocolateCake = chocolateCakeBuilder
+        ChocolateCake chocolateCake = (ChocolateCake) chocolateCakeBuilder
                 .addChocolateCakeBottom("ChocolateCakeBottom")
                 .addRaspberryMousse("RaspberryMousse")
                 .addChocolateCakeBottom("ChocolateCakeBottom")
@@ -122,10 +125,10 @@ public class OrderReceiver {
         chocolateCake.addPropertyChangeListener(ceo);
 
         CakePipeline pipeline = new CakePipeline();
-        pipeline.addCommand(new AddChocolateButterCream());
-        pipeline.addCommand(new AddChocolateGanache());
-        pipeline.addCommand(new AddRaspberry());
-        pipeline.execute(chocolateCake);
+        pipeline.addCommand(new AddChocolateButterCream(chocolateCake));
+        pipeline.addCommand(new AddChocolateGanache(chocolateCake));
+        pipeline.addCommand(new AddRaspberry(chocolateCake));
+        pipeline.execute();
 
         customer.setCake(chocolateCake);
         orders.add(customer);
