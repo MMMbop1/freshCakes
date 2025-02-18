@@ -7,22 +7,19 @@ public class OperaCakeBuilder implements Builder {
 
     private OperaCake operaCake = new OperaCake();
 
-    @Override
-    public Builder addCakeBottom(String cakeBottom) {
+    public OperaCakeBuilder addCakeBottom(String cakeBottom) {
         operaCake.addCakeBottom(cakeBottom);
         System.out.println("added:" + operaCake.getCakeBottoms().getLast());
         return this;
     }
 
-    @Override
-    public Builder addVanillaCream(String vanillaCream) {
+    public OperaCakeBuilder addVanillaCream(String vanillaCream) {
         operaCake.addVanillaCream(vanillaCream);
         System.out.println("added:" + operaCake.getVanillaCreams().getLast());
         return this;
     }
 
-    @Override
-    public Builder addRaspberryJam(String raspberryJam) {
+    public OperaCakeBuilder addRaspberryJam(String raspberryJam) {
         operaCake.addRaspberryMousse(raspberryJam);
         System.out.println("added:" + operaCake.getRaspBerryJam());
         return this;

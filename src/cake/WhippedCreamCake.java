@@ -7,7 +7,6 @@ public abstract class WhippedCreamCake extends Cake {
     private ArrayList<String> vanillaCreams = new ArrayList<>();
     private String hardWhippedCream;
     private String icingSugar;
-
     private String marzipanRose;
 
 

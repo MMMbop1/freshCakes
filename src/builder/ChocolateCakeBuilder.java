@@ -8,15 +8,13 @@ public class ChocolateCakeBuilder implements Builder {
 
     public ChocolateCakeBuilder() {}
 
-    @Override
-    public Builder addChocolateCakeBottom(String chocolateCakeBottom) {
+    public ChocolateCakeBuilder addChocolateCakeBottom(String chocolateCakeBottom) {
         chocolateCake.addChocolateCakeBottom(chocolateCakeBottom);
         System.out.println("added:" + chocolateCake.getChocolateCakeBottoms().getLast());
         return this;
     }
 
-    @Override
-    public Builder addRaspberryMousse(String raspberryMousse) {
+    public ChocolateCakeBuilder addRaspberryMousse(String raspberryMousse) {
         chocolateCake.addRaspberryMousse(raspberryMousse);
         System.out.println("added:" + chocolateCake.getRaspberryMousse().getLast());
         return this;

@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class OrderReceiver {
     private ArrayList<Customer> orders = new ArrayList<>();
     private Ceo ceo = new Ceo();
+
     public void menu() {
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -55,7 +56,7 @@ public class OrderReceiver {
     private void orderPrincessCake() {
         Customer customer = newCustomer();
 
-        Builder princessBuilder = new PrincessCakeBuilder();
+        PrincessCakeBuilder princessBuilder = new PrincessCakeBuilder();
 
         PrincessCake princessCake = (PrincessCake) princessBuilder
                 .addCakeBottom("Tårtbotten")
@@ -83,7 +84,7 @@ public class OrderReceiver {
     private void orderOperaCake() {
         Customer customer = newCustomer();
 
-        Builder operaCakeBuilder = new OperaCakeBuilder();
+        OperaCakeBuilder operaCakeBuilder = new OperaCakeBuilder();
 
         OperaCake operaCake = (OperaCake) operaCakeBuilder
                 .addCakeBottom("Tårtbotten")
@@ -110,7 +111,7 @@ public class OrderReceiver {
 
     private void orderChocolateCake() {
         Customer customer = newCustomer();
-        Builder chocolateCakeBuilder = new ChocolateCakeBuilder();
+        ChocolateCakeBuilder chocolateCakeBuilder = new ChocolateCakeBuilder();
 
         ChocolateCake chocolateCake = (ChocolateCake) chocolateCakeBuilder
                 .addChocolateCakeBottom("ChocolateCakeBottom")

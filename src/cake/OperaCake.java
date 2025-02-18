@@ -3,7 +3,6 @@ package cake;
 public class OperaCake extends WhippedCreamCake {
 
     private String raspBerryJam;
-
     private String pinkMarzipanLod;
 
     public void addRaspberryMousse(String raspberryMousse) {
